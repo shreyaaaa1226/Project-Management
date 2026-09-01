@@ -1,0 +1,27 @@
+# ===== Secrets =====
+backend/.env
+frontend/.env
+frontend/.env.local
+*.env
+.env
+
+# ===== Backend (Maven / Spring Boot) =====
+backend/target/
+backend/*.iml
+
+# ===== Frontend (Vite / React) =====
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# ===== IDE (IntelliJ) =====
+.idea/
+*.iml
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
+npm-debug.log*
