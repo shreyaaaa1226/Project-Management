@@ -24,7 +24,7 @@ export const register = userData => async dispatch => {
     const response=await axios.post(`${VITE_API_BASE_URL}/auth/signup`, userData);
     const user = response.data;
     if(user.jwt) localStorage.setItem("jwt",user.jwt)
-    console.log("registerr success:- ",user)
+    console.log("register success:- ",user)
     dispatch(registerSuccess(user));
   } catch (error) {
     console.log("error ",error)
