@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export const API_BASE_URL = "https://project-management-70hc.onrender.com";
+export const   VITE_API_BASE_URL = "https://project-management-70hc.onrender.com";
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL:   VITE_API_BASE_URL,
 });
 
 api.interceptors.request.use(

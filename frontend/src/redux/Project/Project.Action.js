@@ -1,6 +1,6 @@
 // actions.js
 import * as actionTypes from "./ActionTypes";
-import api, { API_BASE_URL } from "@/Api/api";
+import api, { VITE_API_BASE_URL } from "@/Api/api";
 
 // Action for fetching projects
 export const fetchProjects = ({category,tag}) => {
@@ -55,7 +55,7 @@ export const createProject = (projectData) => {
     dispatch({ type: actionTypes.CREATE_PROJECT_REQUEST });
     try {
       const response = await api.post(
-        `${API_BASE_URL}/api/projects`,
+        `${VITE_API_BASE_URL}/api/projects`,
         projectData
       );
       dispatch({
@@ -78,7 +78,7 @@ export const updateProject = ({projectId, updatedData}) => {
     dispatch({ type: actionTypes.UPDATE_PROJECT_REQUEST });
     try {
       const response = await api.put(
-        `${API_BASE_URL}/api/projects/${projectId}`,
+        `${VITE_API_BASE_URL}/api/projects/${projectId}`,
         updatedData
       );
       dispatch({
