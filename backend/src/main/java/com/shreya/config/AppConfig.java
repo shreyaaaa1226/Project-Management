@@ -39,7 +39,7 @@ public class AppConfig {
 		return request -> {
             CorsConfiguration cfg = new CorsConfiguration();
             cfg.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:5173",
-                    "https://project-management-fcyy4s5fg-shreyaaaa1226.vercel.app"));
+                    "project-management-one-chi.vercel.app"));
             cfg.setAllowedMethods(Collections.singletonList("*"));
             cfg.setAllowCredentials(true);
             cfg.setAllowedHeaders(Collections.singletonList("*"));
