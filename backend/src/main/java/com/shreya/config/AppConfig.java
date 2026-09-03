@@ -36,20 +36,17 @@ public class AppConfig {
 	}
 
 	private CorsConfigurationSource corsConfigurationSource() {
-		return new CorsConfigurationSource() {
-			@Override
-			public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
-				CorsConfiguration cfg = new CorsConfiguration();
-				cfg.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:5173",
-						"https://project-management-react-plum.vercel.app"));
-				cfg.setAllowedMethods(Collections.singletonList("*"));
-				cfg.setAllowCredentials(true);
-				cfg.setAllowedHeaders(Collections.singletonList("*"));
-				cfg.setExposedHeaders(Arrays.asList("Authorization"));
-				cfg.setMaxAge(3600L);
-				return cfg;
-			}
-		};
+		return request -> {
+            CorsConfiguration cfg = new CorsConfiguration();
+            cfg.setAllowedOrigins(Arrays.asList("http://localhost:3000", "http://localhost:5173",
+                    "https://project-management-fcyy4s5fg-shreyaaaa1226.vercel.app"));
+            cfg.setAllowedMethods(Collections.singletonList("*"));
+            cfg.setAllowCredentials(true);
+            cfg.setAllowedHeaders(Collections.singletonList("*"));
+            cfg.setExposedHeaders(Arrays.asList("Authorization"));
+            cfg.setMaxAge(3600L);
+            return cfg;
+        };
 	}
 
 	@Bean
